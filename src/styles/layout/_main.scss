@@ -1,0 +1,19 @@
+//HCH
+//25/05/2021
+//Main theme
+.main {
+	background: rgb(46,82,102);
+	background: linear-gradient(40deg, rgba(46,82,102,1) 10%, rgba(46,82,102,1) 35%, rgba(0,212,255,1) 100%);;
+	flex: 1 1 auto;
+	padding: 10px;
+}
+
+.main__container {
+margin: 0 5%;
+
+	&:after {
+		display: table;
+		content: " ";
+		clear:both
+	}
+}

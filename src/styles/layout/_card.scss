@@ -1,0 +1,65 @@
+.card{
+	background: rgb(228,225,220);
+	background: linear-gradient(40deg, rgba(228,225,220,1) 10%, rgba(228,227,225,1) 35%, rgba(211,208,203,1) 100%);;
+	border-radius: 5px;
+	min-height: 150px;
+	margin: 10px; 
+	padding: 5px;
+	box-shadow: $box-shadow;
+}
+
+.card_picture {
+    background-position-x: center;
+    background-position-y: center;
+	background-size: cover;
+    height: 150px;
+	margin: 0;
+    position: static;
+    width: 100%;
+}
+
+.card_info {
+    display: flex;
+    justify-content: center;
+	height: 45px;
+	position: relative;
+    top: -40px;
+    width: 100%;
+
+	.card_time, .card_rate, .card_date {
+		background-color: $maize-crayola;
+		border-radius: 50%;
+		box-shadow: $box-shadow;
+		color: white; 
+		display: flex;
+		flex-direction: column;
+		height: 80px;
+		justify-content: center;
+		margin: 0 5px;
+		text-align: center;
+		width: 80px;
+	}
+}
+.card_title {
+	color: $primary;
+	font-weight: bolder;
+    margin: 5px 5px;
+	padding: 0 0.5rem;
+}
+
+.card_title_original {
+	padding: 0 0.5rem;
+    margin: 5px 5px;
+
+	small {
+		color: $secondary;
+		margin-left: 5px;
+	}
+}
+
+.card_text {
+	color: darken($color: $timberwolf, $amount: 50);
+	margin: 5px; 
+	padding: 0 0.5rem;
+	text-align: justify;
+}
