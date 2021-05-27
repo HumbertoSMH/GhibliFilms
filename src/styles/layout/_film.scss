@@ -1,0 +1,10 @@
+.film_picture {
+	width: 100%;
+}
+
+@media (max-width: $phone-width) {
+	.film_picture {
+		width: 100%;
+		margin: 25px 0;
+	}
+}

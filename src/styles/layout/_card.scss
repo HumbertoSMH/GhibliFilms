@@ -48,8 +48,13 @@
 }
 
 .card_title_original {
+	display: -webkit-box;
+	margin: 5px 5px;
+	overflow: hidden;
 	padding: 0 0.5rem;
-    margin: 5px 5px;
+	text-overflow: ellipsis;
+   	-webkit-line-clamp: 1; 
+   	-webkit-box-orient: vertical;
 
 	small {
 		color: $secondary;
@@ -57,9 +62,54 @@
 	}
 }
 
+.card_title_original_full {
+	margin: 5px 5px;
+	padding: 0 0.5rem;
+}
+
 .card_text {
+	color: darken($color: $timberwolf, $amount: 50);
+	display: -webkit-box;
+	margin: 5px; 
+	overflow: hidden;
+	padding: 0 0.5rem;
+	text-align: justify;
+   	text-overflow: ellipsis;
+   	-webkit-line-clamp: 3;
+   	-webkit-box-orient: vertical;
+}
+
+.card_text_full {
 	color: darken($color: $timberwolf, $amount: 50);
 	margin: 5px; 
 	padding: 0 0.5rem;
 	text-align: justify;
+}
+
+.card_director, .card_producer {
+	margin: 5px;
+    padding: 0 0.5rem;
+
+	strong {
+		color: lighten($color: $primary, $amount: 20) !important;
+	}
+}
+.card_link_container {
+	display: flex;
+	width: 100%;
+}
+
+.card_link {
+    padding: 10px;
+    width: 60%;
+    margin: 5px auto;
+    text-align: center;
+    color: white;
+    background-color: #2E5266;
+    text-decoration: none;
+    border-radius: 5px;
+
+	&:hover {
+		background-color: lighten($color: $primary, $amount: 20);
+	}
 }
