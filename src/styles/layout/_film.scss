@@ -2,6 +2,22 @@
 	width: 100%;
 }
 
+.film_not_found {
+    background-color: white;
+    font-size: 2em;
+    margin: 20px;
+    padding: 10px;
+	text-align: center;
+	 
+	img {
+		height: 150px;
+	}
+
+	p {
+		margin: 0px; 
+	}
+}
+
 @media (max-width: $phone-width) {
 	.film_picture {
 		width: 100%;
