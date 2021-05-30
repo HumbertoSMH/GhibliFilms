@@ -7,7 +7,6 @@ export const useFetch = () => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		console.log('me llamaron');
 		fetch(API_URL, CONFIG_FETCH_GET)
 			.then(resp => resp.json())
 			.then(data => {

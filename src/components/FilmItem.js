@@ -16,18 +16,10 @@ export const FilmItem = ({
 			<div className="card" >
 				<div className="card_picture" style={{ backgroundImage: `url(${poster})` }}></div>
 				<div className="card_info">
-					{/* <div className="card_time">
-						<i className="far fa-clock"></i>
-						<span>{time}</span>
-					</div> */}
 					<div className="card_rate">
 						<i className="far fa-star"></i>
 						<span>{score}</span>
 					</div>
-					{/* <div className="card_date">
-						<i className="fas fa-calendar-alt"></i>
-						<span>{date}</span>
-					</div> */}
 				</div>
 				<h3 className="card_title">{title}</h3>
 				<h4 className="card_title_original">{romanised}<small>({originalTitle})</small></h4>

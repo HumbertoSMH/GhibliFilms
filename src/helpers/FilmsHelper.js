@@ -3,5 +3,9 @@ export const getFilmById = (id, films) => {
 };
 
 export const getFilmsByRegex = (regex, films) => {
-	return films.filter(film => film.title.toLowerCase().includes(regex));
+	regex = regex.toLowerCase();
+	if (regex === '') {
+		return films;
+	}
+	return films.filter(film => film.title.toLowerCase().includes(regex) || film.description.toLowerCase().includes(regex));
 };
