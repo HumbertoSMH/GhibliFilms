@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Ghibli App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demo técnica de prueba de FrontEnd para Resuelve tu Deuda. Muestra una lista de las películas de studio Ghibli, puedes buscar por titulo o por la sinopsis de la película. Ver los detalles de cada una, todo esto en un SPA.
 
-## Available Scripts
+## Requisitos del sistema.
 
-In the project directory, you can run:
+El proyecto se desarrollo con React en el siguiente entorno: 
+- NodeJs versión 14.16.0
+- React versión 17.0.2
 
-### `npm start`
+### Para correr el proyecto de forma local. 
+```bash
+#Clonamos el repositorio con el siguiente comando
+git clone https://github.com/HumbertoSMH/GhibliFilms.git
+```
+- Instalamos las dependencias. 
+```console
+npm install
+```
+- Levantamos el servidor.
+```console
+npm start
+```
+El proyecto correra por defecto en el puerto 3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Arquitectura de la aplicación. 
+La aplicación esta desarrollada con una arquitectura básica de React basada en Hooks y Functional components. Se seleccionó React por su rapidez de desarrollo y su capacidad de escalabilidad de la aplicación. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+La Aplicación hace una primera llamada a las APIs involucradas, se guarda en un state que se comparte a traves de los diferentes componentes de la aplicación.
+### Css 
+Del lado de css se usa Sass. Esto nos permite tener estilos parametrizables y nos permite usar el potencial de las funciones que incluye Sass. Esto redujo el tiempo de desarrollo de css.  
+### Routing
+|Ruta|Descripción|
+|---|---|
+|*/*| Es la ruta inicial del proyecto muestra todas las peliculas de studio Ghibli |
+|*/film/:filmId*| Muestra los detalles completos de la pelicula. |
+### LLamadas a APIs
+En un principio se hacia una llamada a la API de studio Ghibli al cargar la pagina inicial y uno más al entrar al detalle de la pelicula seleccionada. Este comportamiento se cambio durante el desarrollo por el uso de un context el cual comparte la información entre los distintos componentes de la aplicación reduciendo las llamadas a la API. Esto fue resultado de usar la API de [OMDb API](https://www.omdbapi.com/) la cual para usuarios gratuitos tiene un limite de 1000 peticiones por día.
+### Busqueda
+La busqueda integrada en la pagina nos permite hacer la busqueda por titulo (En ingles) o por la sinopsis de la pelicula. Se encuentra en un componente que obtiene la información de las peliculas desde el context padre. 
+### Limitaciones. 
+ - La busqueda no permite buscar por su titulo original romanizado.
+ - La aplicación no hace uso de un cache lo cual podria reducir aun mas las llamadas a las APIs involucradas. 
+ - La aplicación no hace uso de reducers o redux  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Si se contara con un tiempo mayor de desarrollo todas estas características serian incorporadas en la aplicación.*
 
-### `npm run build`
+### Experiencia. 
+El desarrollo de este demo me permitio conocer el framework de React, ver sus cualidades y tomar el desafio de mejorar no solo el codigo, si no la interacción entre componentes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El codigo que mas trabajo y mas orgullo sentí desarrollar fue el [Autocomplete](https://github.com/HumbertoSMH/GhibliFilms/blob/master/src/components/Autocomplete.js) si bien no fue un desarrollo 100% propio, se tomo la inspiración de diferentes lugares y se parametrizo y configuro de acuerdo a las necesidades del proyecto. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Hacer el deploy a GitHub Pages tambien fue un reto, aunque anteriormente habia utilizado GitHub para llevar mi control de codigo esta es la primera vez que se hace un deploy. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Demo 
+El demo live se puede encontrar en el siguiente enlace [Ghibli APP](https://humbertosmh.github.io/GhibliFilms/) 
