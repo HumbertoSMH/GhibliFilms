@@ -21,8 +21,6 @@ export const Autocomplete = ({ data }) => {
 
 	const updateSearch = (e) => {
 		const searchTerm = e.target.value;
-		console.log(e.target.value);
-		console.log(searchTerm);
 		if (searchTerm === '') {
 			updateDisplayResults(true);
 		} else {

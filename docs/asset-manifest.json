@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9c6f5fca.chunk.css",
+    "main.js": "/static/js/main.d7f9d3a3.chunk.js",
+    "main.js.map": "/static/js/main.d7f9d3a3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c4f68aa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c4f68aa.js.map",
+    "static/js/2.33f0fe5c.chunk.js": "/static/js/2.33f0fe5c.chunk.js",
+    "static/js/2.33f0fe5c.chunk.js.map": "/static/js/2.33f0fe5c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9c6f5fca.chunk.css.map": "/static/css/main.9c6f5fca.chunk.css.map",
+    "static/js/2.33f0fe5c.chunk.js.LICENSE.txt": "/static/js/2.33f0fe5c.chunk.js.LICENSE.txt",
+    "static/media/studio-ghibli-logo.35cf807f.svg": "/static/media/studio-ghibli-logo.35cf807f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c4f68aa.js",
+    "static/js/2.33f0fe5c.chunk.js",
+    "static/css/main.9c6f5fca.chunk.css",
+    "static/js/main.d7f9d3a3.chunk.js"
+  ]
+}
