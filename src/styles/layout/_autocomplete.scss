@@ -1,0 +1,53 @@
+.autocomplete {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.autocomplete_input {
+	background-color: white;
+    border: none;
+	color:$secondary;
+    font-size: 1.2em;
+	transition: 0.2s ease;
+	width: 100%;
+
+	&:focus { 
+		border: 1px solid $primary;
+		outline: none;
+	}
+}
+
+.autocomplete_suggestions {
+	background-color: white;
+	list-style: none;
+	text-align: center; 
+	max-height: 300px;
+	overflow-y: scroll;
+	padding: 0;
+
+	li {
+		padding: 3px; 		
+	} 
+}
+
+.autocomplete_link {
+	color: $primary;
+	text-decoration: none;
+
+	&:visited {
+		color: $primary;
+	}
+}
+
+.autocomplete_suggestion_active {
+	background-color: $primary;
+
+	a {
+		color: white;
+		&:visited {
+			color: white;
+		}
+	}
+}
+
+
