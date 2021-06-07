@@ -21,7 +21,11 @@ export const FilmScreen = () => {
 					? (
 						<>
 							<div className="col-sm-12 col-push-1 col-4 mt-25">
-								<img src={film?.poster} title="img" className="film_picture" />
+								{
+									film?.poster === 'N/A'
+										? <img src="https://cdn.worldvectorlogo.com/logos/studio-ghibli-logo.svg" title="No Image" className="film_picture"/>
+										: <img src={film?.poster} title="img" className="film_picture" />
+								}
 							</div>
 							<div className="col-sm-12 col-6 mt-25">
 								<div className="card">

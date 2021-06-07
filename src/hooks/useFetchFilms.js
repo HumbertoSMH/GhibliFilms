@@ -14,7 +14,7 @@ export const useFetch = () => {
 					fetch(getUrlPoster(film.title))
 						.then(response => response.json())
 						.then(posterRes => {
-							film = { ...film, poster: posterRes.Poster };
+							film = { ...film, poster: posterRes.Poster === undefined ? 'https://i.pinimg.com/564x/10/ce/21/10ce2159687d0e034a3e8f5a7db7f07c.jpg' : posterRes.Poster };
 							setFilms(films => [...films, film]);
 						});
 				});

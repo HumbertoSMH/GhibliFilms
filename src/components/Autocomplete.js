@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getFilmsByRegex } from '../helpers/FilmsHelper';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 export const Autocomplete = ({ data }) => {
 	const history = useHistory();
@@ -78,10 +78,10 @@ export const Autocomplete = ({ data }) => {
 				{!displayResults &&
 					filteredResults.map((article, index) => (
 						<li key={index} className={focusIndex === index ? 'autocomplete_suggestion_active' : null}>
-							<a href={`./film/${article.id}`} className="autocomplete_link"
+							<Link to={`./film/${article.id}`} className="autocomplete_link"
 								ref={() => { linkRefs[index] = article.id; }}>
 								{article.title}
-							</a>
+							</Link>
 						</li>
 					))
 				}

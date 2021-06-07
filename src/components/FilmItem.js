@@ -14,7 +14,7 @@ export const FilmItem = ({
 	return (
 		<div className="col-sm-12 col-md-6 col-4">
 			<div className="card" >
-				<div className="card_picture" style={{ backgroundImage: `url(${poster})` }}></div>
+				<div className="card_picture" style={{ backgroundImage: `url(${poster === 'N/A' ? 'https://cdn.worldvectorlogo.com/logos/studio-ghibli-logo.svg' : poster})` }}></div>
 				<div className="card_info">
 					<div className="card_rate">
 						<i className="far fa-star"></i>
